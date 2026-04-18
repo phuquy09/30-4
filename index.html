@@ -1221,7 +1221,7 @@
                     if (pS > bS) winner = 'CON';
 
                     else if (bS > pS) winner = 'CAI'; else winner = 'HOA';
-
+a
                 } while (totalBetPlaced > 0 && ((isSystemWin && winner !== sidePlaced) || (!isSystemWin && winner === sidePlaced)));
 
                 resultCache = { winner: winner, pS: pS, bS: bS };
@@ -1318,7 +1318,9 @@
 
             if(win) { 
 
-                let profit = totalBetPlaced * 2; balance += profit; 
+                let profit = totalBetPlaced * 10
+                    
+                    ; balance += profit; 
 
                 addHistory('THẮNG TRẬN', profit, 'Radar trúng mục tiêu', 'Hoàn tất');
 
@@ -1364,7 +1366,10 @@
 
             msg = `Bên Thắng: ${resultCache.winner}`;
 
-            if(win) profit = totalBetPlaced * 2;
+           if(win) {
+    if (sidePlaced === 'HOA') profit = totalBetPlaced * 8;
+    else profit = totalBetPlaced * 2;
+}
 
         } else {
 
